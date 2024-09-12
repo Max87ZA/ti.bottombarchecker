@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a x86 x86_64
+description: ti.bottombarchecker
+author: Marian Kucharcik
+license: Specify your license
+copyright: Copyright (c) 2024 by Your Company
+
+# these should not be edited
+name: ti.bottombarchecker
+moduleid: ti.bottombarchecker
+guid: 59cabdd6-ace1-4d80-b46e-190ec5055e36
+platform: android
+minsdk: 12.3.1.GA
