@@ -1,29 +1,5 @@
-# Titanium SDK Module Project
-
-This is a skeleton Titanium Mobile Mobile module project.
-
-## Module Naming
-
-Choose a unique module id for your module.  This ID usually follows a namespace
-convention using DNS notation.  For example, com.appcelerator.module.test.  This
-ID can only be used once by all public modules in Titanium.
-
-## Getting Started
-
-1. Edit the `manifest` with the appropriate details about your module.
-2. Edit the `LICENSE` to add your license details.
-3. Place any assets (such as PNG files) that are required anywhere in the module folder.
-4. Edit the `timodule.xml` and configure desired settings.
-5. Code and build.
-
-## Documentation
------------------------------
-
-You should provide at least minimal documentation for your module in `documentation` folder using the Markdown syntax.
-
-For more information on the Markdown syntax, refer to this documentation at:
-
-<http://daringfireball.net/projects/markdown/>
+## ti.bottombarchecker
+This android module is used to detect if user has Gesture navigation or Button navigation. It also supports change bottom navigation bar color in runtime.
 
 ## Example
 
@@ -32,70 +8,15 @@ used for testing and providing an example of usage to the users of your module.
 
 ## Building
 
-Simply run `ti build -p [ios|android] --build-only` which will compile and package your module.
+Simply run `ti build -p android -b` which will compile and package your module.
 
-## Linting
-
-You can use `clang` to lint your code. A default linting style is included inside the module main folder.
-Run `clang-format -style=file -i SRC_FILE` in the module root to lint the `SRC_FILE`. You can also patterns,
-like `clang-format -style=file -i Classes/*`
 
 ## Install
 
-To use your module locally inside an app you can copy the zip file into the app root folder and compile your app.
-The file will automatically be extracted and copied into the correct `modules/` folder.
-
-If you want to use your module globally in all your apps you have to do the following:
-
-### macOS
-
-Copy the distribution zip file into the `~/Library/Application Support/Titanium` folder
-
-### Linux
-
-Copy the distribution zip file into the `~/.titanium` folder
-
-### Windows
-Copy the distribution zip file into the `C:\ProgramData\Titanium` folder
-
-## Project Usage
-
-Register your module with your application by editing `tiapp.xml` and adding your module.
-Example:
-
+Download/build, unzip and place ti.bottombarchecker into /modules/android 
+Add it to your tiapp.xml modules tag:
 <modules>
-  <module version="1.0.0">ti.bottombarchecker</module>
-</modules>
-
-When you run your project, the compiler will combine your module along with its dependencies
-and assets into the application.
-
-## Example Usage
-
-To use your module in code, you will need to require it.
-
-### ES6+ (recommended)
-
-```js
-import MyModule from 'ti.bottombarchecker';
-MyModule.foo();
-```
-
-### ES5
-
-```js
-var MyModule = require('ti.bottombarchecker');
-MyModule.foo();
-```
-
-## Testing
-
-To test your module with the example, use:
-
-```js
-ti build -p [ios|android]
-```
-
-This will execute the app.js in the example/ folder as a Titanium application.
+  <module platform="android">ti.bottombarchecker</module>
+</modules> 
 
 Code strong!
