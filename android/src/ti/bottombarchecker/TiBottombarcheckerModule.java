@@ -12,17 +12,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowInsets;
 
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 
 import org.appcelerator.titanium.TiApplication;
 import org.appcelerator.kroll.common.Log;
-import org.appcelerator.kroll.common.TiConfig;
-import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.titanium.util.TiConvert;
 
 
@@ -47,7 +43,7 @@ public class TiBottombarcheckerModule extends KrollModule
         Activity activity = TiApplication.getInstance().getCurrentActivity();
         if (activity != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
-            window.setNavigationBarColor(TiConvert.toColor(colorHex));
+            window.setNavigationBarColor(TiConvert.toColor(colorHex, TiApplication.getAppCurrentActivity()));
         }
         else
         {
